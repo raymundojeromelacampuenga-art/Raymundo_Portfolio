@@ -31,11 +31,11 @@ const projects = [
     link: "https://digi-laya-landing-page.vercel.app",
   },
   {
-    title: "Project two",
+    title: "WalangBrownout",
     kind: "Group project",
-    desc: "Say your role clearly, for example: designed the screens and wrote the front end.",
-    tags: ["UI/UX", "Prototype"],
-    link: "#",
+    desc: "Designed the user interface and built the responsive front-end for a real-time power outage tracker.",
+    tags: ["UI/UX", "React"],
+    link: "https://unpaiddevfrontend.onrender.com",
   },
   {
     title: "Anniversary Web App",
