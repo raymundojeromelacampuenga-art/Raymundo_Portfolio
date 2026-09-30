@@ -18,7 +18,8 @@ const CONFIG = {
 };
 
 const projects = [
-{ title: "Digilaya", kind: "Course project", desc: "A digital platform developed to empower local users with accessible online tools and resources.", tags: ["React", "JavaScript"], link: "https://digi-laya-landing-page.vercel.app
+{ title: "Digilaya", kind: "Course project", desc: "A digital platform developed to empower local users with accessible online tools and resources.", tags: ["React", "JavaScript"], link: "https://digi-laya-landing-page.vercel.app" }
+  { title: "Project two", kind: "Group project", desc: "Say your role clearly, for example: designed the screens and wrote the front end.", tags: ["UI/UX", "Prototype"], link: "#" },
   { title: "Project three", kind: "Personal project", desc: "Something you made for fun or to learn a new skill.", tags: ["JavaScript", "CSS"], link: "#" },
 ];
 
