@@ -237,11 +237,18 @@ html,body{background:#0e0a0a!important}
 .ps.js .rv.in{opacity:1;transform:none}
 .ps.js .card.in:hover{transform:translateY(-6px);border-color:var(--wine);transition-delay:0s}
 @media(max-width:820px){
-  .nav ul{display:none}
-  .hero{min-height:760px}.giant{top:10px}
-  .photo{top:130px;right:5vw;width:60vw;height:400px}
-  .hl{width:auto;right:5vw;bottom:40px}
+  .nav{padding:12px 5vw}.nav ul{display:none}
+  .hero{display:flex;flex-direction:column;min-height:0;padding:24px 5vw 48px}
+  .giant{position:relative;left:auto;right:auto;top:auto;margin-bottom:4cqw}
+  .photo{position:relative;right:auto;top:auto;width:100%;height:min(105vw,460px);margin:-2cqw 0 0}
+  .photo.empty{height:320px}
+  .hl{position:relative;left:auto;bottom:auto;width:auto;margin-top:-24px}
+  .hl h2{font-size:clamp(20px,6vw,26px)}
+  .sec{padding:56px 5vw}
+  .lead{font-size:19px}
   .cards,.two,.skills{grid-template-columns:1fr}.two{gap:40px}
+  .ps .btn{padding:10px 18px}
+  .form input,.form textarea{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ps *,.ps *::after{transition:none!important}.hero::before,.giant span,.photo,.hl>*,.marquee>div{animation:none!important}.ps.js .rv{opacity:1!important;transform:none!important}}
 `;
