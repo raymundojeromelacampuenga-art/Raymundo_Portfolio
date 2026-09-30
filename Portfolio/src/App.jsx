@@ -38,11 +38,11 @@ const projects = [
     link: "#",
   },
   {
-    title: "Project three",
+    title: "Anniversary Web App",
     kind: "Personal project",
-    desc: "Something you made for fun or to learn a new skill.",
+    desc: "An interactive digital letter and personalized web project built as a special gift for my girlfriend.",
     tags: ["JavaScript", "CSS"],
-    link: "#",
+    link: "https://anniversary-website-for-you-my-love.vercel.app",
   },
 ];
 
