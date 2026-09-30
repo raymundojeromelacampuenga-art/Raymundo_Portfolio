@@ -1,12 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-
-/*
-  PortfolioSite.jsx: student portfolio (hero, projects, skills, about + education, contact).
-  Edit the CONFIG block; the rest reads from it.
-  Fonts: add to index.html <head>:
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
-*/
-
 const CONFIG = {
   name: "Jerome Raymundo",
   email: "raymundojeromelacampuenga@gmail.com",
@@ -26,8 +18,7 @@ const CONFIG = {
 };
 
 const projects = [
-  { title: "Project one", kind: "Course project", desc: "What it is, what you built, and your part in it, in one or two sentences.", tags: ["Figma", "React"], link: "#" },
-  { title: "Project two", kind: "Group project", desc: "Say your role clearly, for example: designed the screens and wrote the front end.", tags: ["UI/UX", "Prototype"], link: "#" },
+{ title: "Digilaya", kind: "Course project", desc: "A digital platform developed to empower local users with accessible online tools and resources.", tags: ["React", "JavaScript"], link: "https://digi-laya-landing-page.vercel.app
   { title: "Project three", kind: "Personal project", desc: "Something you made for fun or to learn a new skill.", tags: ["JavaScript", "CSS"], link: "#" },
 ];
 
