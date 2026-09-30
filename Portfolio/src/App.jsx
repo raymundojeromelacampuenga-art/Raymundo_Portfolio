@@ -10,7 +10,12 @@ const CONFIG = {
   school: "Pamantasan ng Cabuyao (UcPNC)",
   degree: "BS in Your Degree Program",
   year: "3rd year, expected graduation 2027",
-  coursework: ["Web Development", "Human-Computer Interaction", "Game Concept and Design", "Databases"],
+  coursework: [
+    "Web Development",
+    "Human-Computer Interaction",
+    "Game Concept and Design",
+    "Databases",
+  ],
   about: [
     "I'm a third-year student who enjoys turning ideas into interfaces people can actually use.",
     "I'm looking for an internship where I can learn from a team and contribute to real products.",
@@ -18,9 +23,27 @@ const CONFIG = {
 };
 
 const projects = [
-{ title: "Digilaya", kind: "Course project", desc: "A digital platform developed to empower local users with accessible online tools and resources.", tags: ["React", "JavaScript"], link: "https://digi-laya-landing-page.vercel.app" }
-  { title: "Project two", kind: "Group project", desc: "Say your role clearly, for example: designed the screens and wrote the front end.", tags: ["UI/UX", "Prototype"], link: "#" },
-  { title: "Project three", kind: "Personal project", desc: "Something you made for fun or to learn a new skill.", tags: ["JavaScript", "CSS"], link: "#" },
+  {
+    title: "Digilaya",
+    kind: "Course project",
+    desc: "A digital platform developed to empower local users with accessible online tools and resources.",
+    tags: ["React", "JavaScript"],
+    link: "https://digi-laya-landing-page.vercel.app",
+  },
+  {
+    title: "Project two",
+    kind: "Group project",
+    desc: "Say your role clearly, for example: designed the screens and wrote the front end.",
+    tags: ["UI/UX", "Prototype"],
+    link: "#",
+  },
+  {
+    title: "Project three",
+    kind: "Personal project",
+    desc: "Something you made for fun or to learn a new skill.",
+    tags: ["JavaScript", "CSS"],
+    link: "#",
+  },
 ];
 
 const skills = {
@@ -38,9 +61,23 @@ function ContactForm() {
   };
   return (
     <form onSubmit={submit} className="form">
-      <label>Name<input required value={f.name} onChange={set("name")} /></label>
-      <label>Email<input required type="email" value={f.email} onChange={set("email")} /></label>
-      <label>Message<textarea required rows={4} value={f.message} onChange={set("message")} /></label>
+      <label>
+        Name
+        <input required value={f.name} onChange={set("name")} />
+      </label>
+      <label>
+        Email
+        <input required type="email" value={f.email} onChange={set("email")} />
+      </label>
+      <label>
+        Message
+        <textarea
+          required
+          rows={4}
+          value={f.message}
+          onChange={set("message")}
+        />
+      </label>
       <button className="btn solid">Send message</button>
     </form>
   );
@@ -52,8 +89,20 @@ export default function PortfolioSite() {
     const el = root.current;
     el.classList.add("js");
     const items = el.querySelectorAll(".rv");
-    if (!("IntersectionObserver" in window)) { items.forEach((n) => n.classList.add("in")); return; }
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.15 });
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((n) => n.classList.add("in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (es) =>
+        es.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.15 },
+    );
     items.forEach((n) => io.observe(n));
     return () => io.disconnect();
   }, []);
@@ -63,24 +112,57 @@ export default function PortfolioSite() {
       <style>{css}</style>
 
       <nav className="nav">
-        <a href="#top" className="logo">{CONFIG.name.split(" ")[0]}</a>
+        <a href="#top" className="logo">
+          {CONFIG.name.split(" ")[0]}
+        </a>
         <ul>
-          <li><a href="#work">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#about">About</a></li>
+          <li>
+            <a href="#work">Projects</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
         </ul>
-        <a className="btn" href="#contact">Contact me</a>
+        <a className="btn" href="#contact">
+          Contact me
+        </a>
       </nav>
 
       <header id="top" className="hero">
-        <h1 className="giant" aria-hidden="true">{"PORTFOLIO".split("").map((c, i) => <span key={i} style={{ "--i": i }}>{c}</span>)}</h1>
-        <div className={CONFIG.heroImg ? "photo" : "photo empty"} style={CONFIG.heroImg ? { backgroundImage: `url(${CONFIG.heroImg})` } : undefined}>{!CONFIG.heroImg && <span>Your photo here</span>}</div>
+        <h1 className="giant" aria-hidden="true">
+          {"PORTFOLIO".split("").map((c, i) => (
+            <span key={i} style={{ "--i": i }}>
+              {c}
+            </span>
+          ))}
+        </h1>
+        <div
+          className={CONFIG.heroImg ? "photo" : "photo empty"}
+          style={
+            CONFIG.heroImg
+              ? { backgroundImage: `url(${CONFIG.heroImg})` }
+              : undefined
+          }
+        >
+          {!CONFIG.heroImg && <span>Your photo here</span>}
+        </div>
         <div className="hl">
-          {CONFIG.status && <span className="status"><i /> {CONFIG.status}</span>}
+          {CONFIG.status && (
+            <span className="status">
+              <i /> {CONFIG.status}
+            </span>
+          )}
           <h2>{CONFIG.headline}</h2>
           <div className="ctas">
-            <a className="btn solid" href="#work">View my projects</a>
-            <a className="btn" href="#contact">Get in touch</a>
+            <a className="btn solid" href="#work">
+              View my projects
+            </a>
+            <a className="btn" href="#contact">
+              Get in touch
+            </a>
           </div>
         </div>
       </header>
@@ -88,7 +170,18 @@ export default function PortfolioSite() {
       <div className="marquee" aria-hidden="true">
         <div>
           {[0, 1].map((k) => (
-            <span key={k}>{["UI/UX", "Web Design", "React", "Figma", "Wireframing", "Prototyping"].map((t) => <b key={t}>{t} ✦</b>)}</span>
+            <span key={k}>
+              {[
+                "UI/UX",
+                "Web Design",
+                "React",
+                "Figma",
+                "Wireframing",
+                "Prototyping",
+              ].map((t) => (
+                <b key={t}>{t} ✦</b>
+              ))}
+            </span>
           ))}
         </div>
       </div>
@@ -97,11 +190,20 @@ export default function PortfolioSite() {
         <h3 className="sh rv">Projects</h3>
         <div className="cards">
           {projects.map((p, i) => (
-            <a key={p.title} href={p.link} className="card rv" style={{ "--i": i }}>
+            <a
+              key={p.title}
+              href={p.link}
+              className="card rv"
+              style={{ "--i": i }}
+            >
               <small>{p.kind}</small>
               <h4>{p.title}</h4>
               <p>{p.desc}</p>
-              <div className="tags">{p.tags.map((t) => <i key={t}>{t}</i>)}</div>
+              <div className="tags">
+                {p.tags.map((t) => (
+                  <i key={t}>{t}</i>
+                ))}
+              </div>
             </a>
           ))}
         </div>
@@ -113,7 +215,11 @@ export default function PortfolioSite() {
           {Object.entries(skills).map(([group, list]) => (
             <div key={group} className="rv">
               <h4>{group}</h4>
-              <div className="tags">{list.map((s) => <i key={s}>{s}</i>)}</div>
+              <div className="tags">
+                {list.map((s) => (
+                  <i key={s}>{s}</i>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -122,15 +228,25 @@ export default function PortfolioSite() {
       <section id="about" className="sec two">
         <div className="rv">
           <h3 className="sh">About me</h3>
-          {CONFIG.about.map((p) => <p key={p} className="lead">{p}</p>)}
-          <a className="btn" href={CONFIG.resumeUrl}>Download resume</a>
+          {CONFIG.about.map((p) => (
+            <p key={p} className="lead">
+              {p}
+            </p>
+          ))}
+          <a className="btn" href={CONFIG.resumeUrl}>
+            Download resume
+          </a>
         </div>
         <div className="edu rv" style={{ "--i": 1 }}>
           <h3 className="sh">Education</h3>
           <h4>{CONFIG.school}</h4>
           <p>{CONFIG.degree}</p>
           <small>{CONFIG.year}</small>
-          <div className="tags">{CONFIG.coursework.map((c) => <i key={c}>{c}</i>)}</div>
+          <div className="tags">
+            {CONFIG.coursework.map((c) => (
+              <i key={c}>{c}</i>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -138,17 +254,23 @@ export default function PortfolioSite() {
         <div className="rv">
           <h3 className="sh">Contact</h3>
           <h2 className="big">Let's work together.</h2>
-          <p className="lead">Message me about an internship, a collaboration, or just to say hi.</p>
+          <p className="lead">
+            Message me about an internship, a collaboration, or just to say hi.
+          </p>
           <p className="links">
             <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>
             <a href={CONFIG.github}>GitHub</a>
             <a href={CONFIG.linkedin}>LinkedIn</a>
           </p>
         </div>
-        <div className="rv" style={{ "--i": 1 }}><ContactForm /></div>
+        <div className="rv" style={{ "--i": 1 }}>
+          <ContactForm />
+        </div>
       </section>
 
-      <footer className="foot">© {new Date().getFullYear()} {CONFIG.name}</footer>
+      <footer className="foot">
+        © {new Date().getFullYear()} {CONFIG.name}
+      </footer>
     </div>
   );
 }
