@@ -3,7 +3,7 @@ const CONFIG = {
   name: "Jerome Raymundo",
   email: "raymundojeromelacampuenga@gmail.com",
   github: "https://github.com/raymundojeromelacampuenga-art",
-  linkedin: "https://linkedin.com/in/yourname",
+  linkedin: "www.linkedin.com/in/raymundo-jerome",
   resumeUrl: "/resume.pdf",
   heroImg: "https://cdn.corenexis.com/f/7OYj5KDiieZ.png",
   headline: "3rd-year student designing and building clean, usable websites.",
