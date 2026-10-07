@@ -1,3 +1,4 @@
+import Chatbot from "./Chatbot";
 import React, { useState, useEffect, useRef } from "react";
 const CONFIG = {
   name: "Jerome Raymundo",
@@ -271,6 +272,8 @@ export default function PortfolioSite() {
       <footer className="foot">
         © {new Date().getFullYear()} {CONFIG.name}
       </footer>
+
+      <Chatbot config={CONFIG} projects={projects} skills={skills} />
     </div>
   );
 }
