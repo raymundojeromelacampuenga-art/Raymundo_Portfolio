@@ -1,4 +1,3 @@
-import Chatbot from "./Chatbot";
 import React, { useState, useEffect, useRef } from "react";
 const CONFIG = {
   name: "Jerome Raymundo",
