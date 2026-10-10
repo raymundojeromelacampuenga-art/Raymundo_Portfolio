@@ -1,3 +1,4 @@
+import ChatAssistant from "./ChatAssistant";
 import React, { useState, useEffect, useRef } from "react";
 const CONFIG = {
   name: "Jerome Raymundo",
@@ -268,6 +269,7 @@ export default function PortfolioSite() {
         </div>
       </section>
 
+      <ChatAssistant />
       <footer className="foot">
         © {new Date().getFullYear()} {CONFIG.name}
       </footer>
