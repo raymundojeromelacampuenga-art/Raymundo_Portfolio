@@ -271,8 +271,6 @@ export default function PortfolioSite() {
       <footer className="foot">
         © {new Date().getFullYear()} {CONFIG.name}
       </footer>
-
-      <Chatbot config={CONFIG} projects={projects} skills={skills} />
     </div>
   );
 }
